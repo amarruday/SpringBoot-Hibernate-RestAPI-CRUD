@@ -1,0 +1,20 @@
+--
+-- Create schema `crud-rest-api`
+--
+
+CREATE DATABASE IF NOT EXISTS `crud-rest-api`;
+USE `crud-rest-api`;
+
+--
+-- Definition of table `tbl_employee`
+--
+
+DROP TABLE IF EXISTS `tbl_employee`;
+CREATE TABLE `tbl_employee` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) DEFAULT NULL,
+  `gender` varchar(45) DEFAULT NULL,
+  `department` varchar(45) DEFAULT NULL,
+  `dob` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
