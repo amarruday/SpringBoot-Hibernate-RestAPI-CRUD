@@ -2,6 +2,7 @@ package com.amarruday.crud.service;
 
 import java.util.List;
 
+import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -26,20 +27,22 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Override
 	public Employee getEmployeeById(int id) {
 		// TODO Auto-generated method stub
-		return null;
+		return dao.getEmployeeById(id);
 	}
 
 	@Transactional
 	@Override
 	public void save(Employee employee) {
 		// TODO Auto-generated method stub
+		dao.save(employee);
+		
 	}
 
 	@Transactional
 	@Override
 	public void delete(int id) {
 		// TODO Auto-generated method stub
-		
+		dao.delete(id);
 	}
 
 }
